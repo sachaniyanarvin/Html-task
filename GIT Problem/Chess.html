@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Chess Board</title>
+</head>
+<style>
+    .chess-board-3d {
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+        background:#beb9b9;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 588px;
+        height: 588px;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+    .square {
+        width: 70px;
+        height: 70px;
+        background-color: #ccc;
+        border: 2px solid #666;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        margin: 0; 
+        display: inline-block;
+    }
+    .square.white {
+        background-color: #fff;
+    }
+    .square.black {
+        background-color: #000;
+    }
+    .square[data-depth="1"] {
+        transform: translateZ(50px);
+    }
+    .square[data-depth="2"] {
+        transform: translateZ(100px);
+    }
+    .square[data-depth="3"] {
+        transform: translateZ(150px);
+    }
+    .square:hover {
+        transform: translateZ(200px);
+    }
+    .border {
+        position: relative;
+        border: 10px solid #666;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform-style: preserve-3d;
+        transform: translateZ(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .piece {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+      .piece.white-rook {
+        background-color: #fff;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wr.png');
+        background-size: cover;
+    }
+
+      .piece.black-rook {
+        background-color: #000;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/br.png');
+        background-size: cover;
+    }
+
+      .piece.white-knight {
+        background-color: #fff;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wn.png');
+        background-size: cover;
+    }
+
+      .piece.black-knight {
+        background-color: #000;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wb.png');
+        background-size: cover;
+    }
+
+      .piece.white-bishop {
+        background-color: #fff;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wb.png');
+        background-size: cover;
+    }
+
+      .piece.black-bishop {
+        background-color: #000;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/bb.png');
+        background-size: cover;
+      }
+
+      .piece.white-queen {
+        background-color: #fff;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wq.png');
+        background-size: cover;
+    }
+
+      .piece.black-queen {
+        background-color: #000;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/bq.png');
+        background-size: cover;
+}
+
+      .piece.white-king {
+        background-color: #fff;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wk.png');
+        background-size: cover;
+    }
+
+      .piece.black-king {
+        background-color: #000;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/bk.png');
+        background-size: cover;
+    }
+
+      .piece.white-pawn {
+        background-color: #fff;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/wp.png');
+        background-size: cover;
+    }
+
+      .piece.black-pawn {
+        background-color: #000;
+        background-image: url('https://www.chess.com/chess-themes/pieces/neo/300/bp.png');
+        background-size: cover;
+    }
+</style>
+<body>
+	<div class="chess-board-3d">
+        <div class="border">
+		<div class="row">
+			<div class="square white" data-depth="1">
+                <div class="piece black-rook"></div>
+            </div>
+			<div class="square black" data-depth="1">
+                <div class="piece white-knight"></div>
+            </div>
+			<div class="square white" data-depth="1">
+                <div class="piece black-bishop"></div>
+            </div>
+			<div class="square black" data-depth="1">
+                <div class="piece white-queen"></div>
+            </div>
+			<div class="square white" data-depth="1">
+                <div class="piece black-king"></div>
+            </div>
+			<div class="square black" data-depth="1">
+                <div class="piece white-bishop"></div>
+            </div>
+			<div class="square white" data-depth="1">
+                <div class="piece black-knight"></div>
+            </div>
+			<div class="square black" data-depth="1">
+                <div class="piece white-rook"></div>
+            </div>
+		</div>
+		<div class="row">
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+		</div>
+		<div class="row">
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+		</div>
+		<div class="row">
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+		</div>
+		<div class="row">
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+		</div>
+		<div class="row">
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+			<div class="square black" data-depth="1"></div>
+			<div class="square white" data-depth="1"></div>
+		</div>
+		<div class="row">
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-pawn"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-pawn"></div>
+      </div>
+		</div>
+		<div class="row">
+			<div class="square black" data-depth="1">
+        <div class="piece white-rook"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-knight"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-bishop"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-queen"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-king"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-bishop"></div>
+      </div>
+			<div class="square black" data-depth="1">
+        <div class="piece white-knight"></div>
+      </div>
+			<div class="square white" data-depth="1">
+        <div class="piece black-rook"></div>
+      </div>
+		</div>
+        </div>
+	</div>
+</body>
+</html>

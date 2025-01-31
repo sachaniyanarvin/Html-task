@@ -1,0 +1,325 @@
+<html>
+    <head>
+        <title>Spotify Clone</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+        <style>
+        body {
+
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+        .sidebar {
+            width: 180px;
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            padding: 20px;
+        }
+        .sidebar img {
+            width: 131px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .sidebar a:hover {
+            color: #1DB954;
+        }
+        .sidebar .active {
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .main-content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .main-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .playlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .playlist div {
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 4px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .playlist img {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+        }
+        .shows {
+            margin-top: 20px;
+        }
+        .shows h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .shows .show-list {
+            display: flex;
+            gap: 10px;
+        }
+        .shows .show-list div {
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 4px;
+            width: 150px;
+            text-align: center;
+        }
+        .shows .show-list img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #181818;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer img{
+            width:50px;
+            height:50px;
+            border-radius: 4px;
+            align-items: center;
+        }
+        .footer div{
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            margin-top: -18px;
+        }
+        .underline{
+            width: 100vw;
+            height: -692vh;
+            margin-bottom: -94px;
+            margin-left: -1080px;
+            border-bottom:#1DB954;
+        }
+        .song_item{
+            margin:0;
+            padding: 10px 0;
+        }
+        #container span:last-child{
+            margin-top: 20px;
+        }
+        .image-wrapper{
+            margin-right: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+        }
+        .image-wrapper img{
+            width: 20px;
+            height: 20px;
+        }
+        .image-2{
+            margin: 10px;
+        }
+        .image-3{
+            margin:20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <img alt="Spotify Logo" height="40" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/Spotify%20logo.png?raw=true" width="131"/>
+            <a class="active" href="#">
+                <i class="fas fa-home">
+                </i>
+                Home
+            </a>
+            <a href="#">
+                <i class="fas fa-search">
+                </i>
+                Search
+            </a>
+            <a href="#">
+                <i class="fas fa-book">
+                </i>
+                Your Library
+            </a>
+            <a href="#">
+                <i class="fas fa-plus-square">
+                </i>
+                Create Playlist
+            </a>
+            <a href="#">
+                <i class="fas fa-heart">
+                </i>
+                Liked Songs
+            </a>
+            <a href="#">
+                <i class="fas fa-podcast">
+                </i>
+                Your Episodes
+            </a>
+            <div style="margin-top: 20px;">
+                <a href="#">
+                    FAV
+                </a>
+                <a href="#">
+                    Daily Mix 1
+                </a>
+                <a href="#">
+                    Discover Weekly
+                </a>
+                <a href="#">
+                    Malayalam
+                </a>
+                <a href="#">
+                    Dance / Electronic Mix
+                </a>
+                <a href="#">
+                    EDM / Popular
+                </a>
+            </div>
+            <a href="#" style="margin-top: 20px;">
+                <i class="fas fa-download">
+                </i>
+                Install App
+            </a>
+        </div>
+        <div class="main-content">
+            <h1>
+                Good morning
+            </h1>
+            <div class="playlist">
+                <div>
+                    <img alt="Liked Songs" height="50" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/Liked.png?raw=true" width="50"/>
+                    <p>
+                        Liked Songs
+                    </p>
+                </div>
+                <div>
+                <img alt="Neffex Playlist" height="50" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image4.png?raw=true" width="50"/>
+                <p>
+                    Neffex Playlist
+                </p>
+            </div>
+            <div>
+                <img alt="K/DA" height="50" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/palylist.png?raw=true" width="50"/>
+                <p>
+                    K/DA
+                </p>
+            </div>
+            <div>
+                <img alt="Liked Songs" height="50" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image1.png?raw=true" width="50"/>
+                <p>
+                    Liked Songs
+                </p>
+            </div>
+            <div>
+                <img alt="Dance / Electronic Mix" height="50" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image2.png?raw=true" width="50"/>
+                <p>
+                    Dance / Electronic Mix
+                </p>
+            </div>
+        </div>
+        <div class="shows">
+            <h2>
+                Shows you might like
+            </h2>
+            <div class="show-list">
+                <div>
+                    <img alt="Weekly Motivation" height="150" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image9.png?raw=true" width="150"/>
+                    <p>
+                        Weekly Motivation
+                    </p>
+                    <p>
+                        Ben Ina Scott
+                    </p>
+                </div>
+                <div>
+                    <img alt="Meditation Self" height="150" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image8.png?raw=true" width="150"/>
+                    <p>
+                        Meditation Self
+                    </p>
+                    <p>
+                        Ubn Hussein Aleen
+                    </p>
+                </div>
+                <div>
+                    <img alt="Words beyond actions" height="150" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image7.png?raw=true" width="150"/>
+                    <p>
+                        Words beyond actions
+                    </p>
+                    <p>
+                        Samuel Scott
+                    </p>
+                </div>
+                <div>
+                    <img alt="Words beyond actions" height="150" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image6.png?raw=true" width="150"/>
+                    <p>
+                        Words beyond actions
+                    </p>
+                    <p>
+                        Samuel Scott
+                    </p>
+                </div>
+                <div>
+                    <img alt="Words beyond actions" height="150" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image5.png?raw=true" width="150"/>
+                    <p>
+                        Words beyond actions
+                    </p>
+                    <p>
+                        Samuel Scott
+                    </p>
+                </div>
+                <div>
+                    <img alt="Words beyond actions" height="150" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image10.png?raw=true" width="150"/>
+                    <p>
+                        Words beyond actions
+                    </p>
+                    <p>
+                        Samuel Scott
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <img alt="Dreaming on" height="50" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/image11.png?raw=true" width="50"/>
+            <p class="container">
+                Dreaming On<br>
+                    NEFFEX
+            <div class="image-wrapper">
+                <img alt="green heart" height="-10" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/10.spotify-clone/assets/bx_bxs-heart.png?raw=true" width="-10"/>
+            </div>
+            </p>
+            <div class="image-2">
+                <img style="width: 30vw; height: 45px;" src="Music Player Options.png";>
+            </div>
+            <div class="image-3">
+                <img style="width: 15vw; height:3vh" src="Right options.png"/>
+            </div>
+        </div>
+        <div class="Underline"style="background-color: #1DB954;">
+        </div>
+    </div>
+</html>

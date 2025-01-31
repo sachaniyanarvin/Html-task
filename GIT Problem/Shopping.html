@@ -1,0 +1,372 @@
+<html>
+<head>
+<title>
+    Kidz World
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/06.kidz-world/assets/kw-background.png" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .cart {
+            font-size: 16px;
+        }
+        .banner {
+            background: url('https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/06.kidz-world/assets/kw-background.png') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: calc(25% - 20px);
+            box-sizing: border-box;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+        .product p {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 10px;
+        }
+        .product .price {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product .add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="header">
+    <div class="logo">
+    KIDZ WORLD
+    </div>
+    <div class="cart">
+    Cart items (0)
+    </div>
+    </div>
+    <div class="banner">
+    <h1>
+    Shop. Have Fun. Repeat.
+    </h1>
+    <p>
+    #NewAndNow
+    </p>
+    </div>
+    <div class="section">
+    <h2>
+    Discover New Books
+    </h2>
+    <div class="products">
+    <div class="product">
+    <img alt="This was our pact book cover" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/book1.png?raw=true" width="150"/>
+    <h3>
+    This was our pact
+    </h3>
+    <p>
+    Ryan Andrews
+    </p>
+    <div class="price">
+    $7.49
+    </div>
+    <button class="add-to-cart">
+    Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="The famous five book cover" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/book2.png?raw=true" width="150"/>
+    <h3>
+        The famous five
+    </h3>
+    <p>
+        Guid Blyton
+    </p>
+    <div class="price">
+        $4.59
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Matilda book cover" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/book3.png?raw=true" width="150"/>
+    <h3>
+        Matilda
+    </h3>
+    <p>
+        Roald Dahl
+    </p>
+    <div class="price">
+        $6.80
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Harry Potter book cover" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/book4.png?raw=true" width="150"/>
+    <h3>
+        Harry Potter
+    </h3>
+    <p>
+        JK Rowling
+    </p>
+    <div class="price">
+        $10
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="For Young Readers book cover" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/book5.png?raw=true" width="150"/>
+    <h3>
+        For Young Readers
+    </h3>
+    <p>
+        Ruskin Bond
+    </p>
+    <div class="price">
+        $7.29
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Wimpy Kid - DIY book cover" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/book6.png?raw=true" width="150"/>
+    <h3>
+        Wimpy Kid - DIY
+    </h3>
+    <p>
+        Jeff Kinney
+    </p>
+    <div class="price">
+    $4.99
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="section">
+    <h2>
+    Discover New Games
+    </h2>
+    <div class="products">
+    <div class="product">
+    <img alt="Dart Board" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/dart-board.png?raw=true" width="150"/>
+    <h3>
+        Dart Board
+    </h3>
+    <p>
+        Wooden board, 16 inches
+    </p>
+    <div class="price">
+        $17.49
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Connect 4" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/connect-four.png?raw=true" width="150"/>
+    <h3>
+        Connect 4
+    </h3>
+    <p>
+        Board game, multiplayer
+    </p>
+    <div class="price">
+        $19.99
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Jenga" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/jenga.png?raw=true" width="150"/>
+    <h3>
+        Jenga
+    </h3>
+    <p>
+        Wooden blocks, 54 pieces
+    </p>
+    <div class="price">
+        $20.99
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Monopoly" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/monopoly.png?raw=true" width="150"/>
+    <h3>
+        Monopoly
+    </h3>
+    <p>
+        1.61 x 15.75 x 10.51 inches
+    </p>
+    <div class="price">
+        $19.49
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="section">
+    <h2>
+        Handmade with love
+    </h2>
+    <div class="products">
+    <div class="product">
+    <img alt="Bookmarks" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/bookmarks.png?raw=true" width="150"/>
+    <h3>
+        Bookmarks
+    </h3>
+    <p>
+        Handmade with love
+    </p>
+    <div class="price">
+        $12.49
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Birthday card" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/birthday-card.png?raw=true" width="150"/>
+    <h3>
+        Birthday card
+    </h3>
+    <p>
+    Handmade with love
+    </p>
+    <div class="price">
+        $19.99
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Stuffed toys" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/stuffed-toy.png?raw=true" width="150"/>
+    <h3>
+        Stuffed toys
+    </h3>
+    <p>
+        Handmade with love
+    </p>
+    <div class="price">
+        $15.99
+    </div>
+    <button class="add-to-cart">
+        Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+    <div class="product">
+    <img alt="Dream catcher drawing" height="200" src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/06.kidz-world/assets/dream-catcher.png?raw=true" width="150"/>
+    <h3>
+        Dream catcher drawing
+    </h3>
+    <p>
+        Handmade with love
+    </p>
+    <div class="price">
+    $18.49
+    </div>
+    <button class="add-to-cart">
+    Add
+    <i class="fas fa-shopping-cart">
+    </i>
+    </button>
+    </div>
+</div>
+</div>
+</body>
+</html>

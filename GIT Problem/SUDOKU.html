@@ -1,0 +1,155 @@
+<html></html>
+<head>
+    <title>Sudoku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 9000px;
+        }
+        .sudoku, .answer {
+            display: grid;
+            grid-template-columns: repeat(9, 60px);
+            grid-template-rows: repeat(9, 60px);
+            gap: 0;
+            border: 1px solid #000;
+        }
+        .sudoku div, .answer div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .highlight {
+            background-color: #cce8cc;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .sudoku .box, .answer .box {
+            border: 2px solid #000;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="title">SUDOKU</div>
+            <div class="sudoku">
+                <div>8</div>
+                <div></div>
+                <div>6</div>
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+                <div class="highlight">3</div>
+                <div></div>
+                <div>9</div>
+                <div></div>
+                <div></div>
+                <div>4</div>
+                <div></div>
+                <div class="highlight"></div>
+                <div class="highlight">1</div>
+                <div class="highlight"></div>
+                <div></div>
+                <div>6</div>
+                <div>8</div>
+                <div>2</div>
+                <div></div>
+                <div></div>
+                <div class="highlight">8</div>
+                <div class="highlight">7</div>
+                <div class="highlight"></div>
+                <div></div>
+                <div></div>
+                <div>5</div>
+                <div class="highlight">1</div>
+                <div class="highlight"></div>
+                <div class="highlight">8</div>
+                <div></div>
+                <div>5</div>
+                <div></div>
+                <div class="highlight"></div>
+                <div class="highlight">2</div>
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+                <div class="highlight">3</div>
+                <div class="highlight"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="highlight"></div>
+                <div class="highlight">5</div>
+                <div class="highlight"></div>
+                <div class="highlight">7</div>
+                <div class="highlight"></div>
+                <div class="highlight">5</div>
+                <div></div>
+                <div>3</div>
+                <div></div>
+                <div class="highlight">9</div>
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+                <div></div>
+                <div>2</div>
+                <div>1</div>
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+                <div class="highlight">7</div>
+                <div></div>
+                <div>4</div>
+                <div></div>
+                <div>6</div>
+                <div></div>
+                <div></div>
+                <div class="highlight"></div>
+                <div class="highlight">2</div>
+                <div class="highlight"></div>
+                <div>8</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>8</div>
+                <div>7</div>
+                <div class="highlight">6</div>
+                <div class="highlight"></div>
+                <div class="highlight">4</div>
+                <div></div>
+                <div></div>
+                <div>3</div>
+            </div>
+        </div>
+        <div>
+            <div class="title">ANSWER</div>
+            <div class="answer">
+                <div>8</div><div>7</div><div>6</div><div class="highlight">5</div><div class="highlight">4</div><div class="highlight">3</div><div>1</div><div>9</div><div>2</div>
+                <div>5</div><div>4</div><div>3</div><div class="highlight">2</div><div class="highlight">1</div><div class="highlight">9</div><div>7</div><div>6</div><div>8</div>
+                <div>2</div><div>1</div><div>9</div><div class="highlight">8</div><div class="highlight">7</div><div class="highlight">6</div><div>4</div><div>3</div><div>5</div>
+                <div class="highlight">1</div><div class="highlight">9</div><div class="highlight">8</div><div>7</div><div>6</div><div>5</div><div class="highlight">2</div><div class="highlight">4</div><div class="highlight">3</div>
+                <div class="highlight">4</div><div class="highlight">3</div><div class="highlight">2</div><div>1</div><div>9</div><div>8</div><div class="highlight">6</div><div class="highlight">5</div><div class="highlight">7</div>
+                <div class="highlight">7</div><div class="highlight">6</div><div class="highlight">5</div><div>4</div><div>3</div><div>2</div><div class="highlight">9</div><div class="highlight">8</div><div class="highlight">1</div>
+                <div>3</div><div>2</div><div>1</div><div class="highlight">9</div><div class="highlight">8</div><div class="highlight">7</div><div>5</div><div>6</div><div>4</div>
+                <div>6</div><div>5</div><div>4</div><div class="highlight">3</div><div class="highlight">2</div><div class="highlight">1</div><div>8</div><div>7</div><div>9</div>
+                <div>9</div><div>8</div><div>7</div><div class="highlight">6</div><div class="highlight">5</div><div class="highlight">4</div><div>3</div><div>2</div><div>1</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
