@@ -1,0 +1,334 @@
+    /* ===================== HEADER LINE IN WEBSITE CSS ====================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body 
+{
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #2f363e;
+
+}
+
+header 
+{
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+}
+
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span 
+{
+    color: #e0e0e0;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.search-bar 
+{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search-bar input 
+{
+    width: 100%;
+    padding: 8px 40px 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button 
+{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 57%;
+    transform: translateY(-50%);
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-bar button img 
+{
+    height: 35px;
+    width: 35px;
+}
+
+.nav-links 
+{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li 
+{
+    margin-left: 20px;
+}
+
+.nav-links a 
+{
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover 
+{
+    color: #06f422;
+}
+
+.nav-links a 
+{
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i 
+{
+    margin-right: 8px; /* Space between the icon and the text */
+    font-size: 18px;
+}
+
+
+/*  ===================== DESING WATCH CSS ======================  */
+
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900& dispay=swap');
+
+#clock
+{
+    position: absolute;
+    right: 32%;
+    bottom: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#hrDots,
+#minDots,
+#secDots
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    rotate: 90deg;
+}
+
+#hrDots::before,
+#minDots::before,
+#secDots::before
+{
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    box-shadow: 25px 25px 75px rgba(2, 2, 2, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+
+#secDots h2,
+#minDots h2,
+#hrDots  h2
+{
+    position: absolute;
+    text-align: center;
+    transform: rotate(-90deg);
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 4em;
+    font-weight: 500;
+    color: var(--clr);
+}
+
+#secDots h2 span,
+#minDots h2 span,
+#hrDots  h2 span
+{
+    position: absolute;
+    font-size: 0.25em;
+    font-weight: 500;
+    bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#secDots b
+{
+    position: absolute;
+    color: #fff;
+    display: inline-flex;
+    transform: rotate(-90deg) translate(-30px,90px);
+}
+
+#secDots .dot,
+#minDots .dot,
+#hrDots .dot
+{
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 3px;
+    background: var(--clr);
+    transform-origin: 100px;
+}
+
+#secDots .active .dot,
+#minDots .active .dot,
+#hrDots .active .dot
+{
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 20px var(--clr),
+    0 0 30px var(--clr);
+}
+
+#secDots .active.dot ~ .dot,
+#minDots .active.dot ~ .dot,
+#hrDots .active.dot ~ .dot
+{
+    background: #555;
+}
+
+#secDots .dot:nth-child(5n + 5),
+#minDots .dot:nth-child(5n + 5)
+{
+    width: 20px;
+}
+
+#hrDots .dot
+{
+    width: 20px;
+}
+
+/*  ===================== LOGIN CARD CSS ======================  */
+
+.wrapper 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.wrapper .input-box
+{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.wrapper h1
+{
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,  255, 255, 0.2);
+    border-radius: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder
+{
+    color: #fff;
+}
+
+.input-box i
+{
+    position: absolute;
+    left: 38%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wraapper .remember-forget
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -15px 0 15px;
+}
+
+.remember-forget lable input
+{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forget a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forget a:hover
+{
+    text-decoration: underline;
+}
+
+.wrapper .btn
+{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
