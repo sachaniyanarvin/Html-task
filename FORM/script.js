@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function()
+{
     const text = "Welcome  to  Future Time  WebSite!";
     const container = document.getElementById('animated-text');
     
@@ -10,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         container.appendChild(span);
     });
 });
-function setTime() {
+function setTime() 
+{
     const now = new Date();
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
