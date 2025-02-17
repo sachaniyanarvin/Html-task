@@ -1,43 +1,55 @@
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body 
+{
     font-family: Arial, sans-serif;
     align-items: center;
     justify-content: center;
+    background: #2f363e;
 }
 
-header {
+/* <!-- ===================== HEADER CSS  ====================== --> */
+
+
+header 
+{
     background-color: #1a1a1a;
     padding: 10px 20px;
 }
 
-.navbar {
+.navbar
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.logo 
+{
     display: flex;
     align-items: center;
 }
 
-.logo img {
+.logo img 
+{
     height: 40px;
     margin-right: 10px;
 }
 
-.logo span {
+.logo span 
+{
     color: #e0e0e0;
     font-size: 20px;
     letter-spacing: 2px;
 }
 
-.search-bar {
+.search-bar 
+{
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -46,14 +58,16 @@ header {
     position: relative;
 }
 
-.search-bar input {
+.search-bar input 
+{
     width: 100%;
     padding: 8px 40px 8px 15px;
     border-radius: 20px;
     border: 1px solid #ccc;
 }
 
-.search-bar button {
+.search-bar button 
+{
     background: none;
     border: none;
     position: absolute;
@@ -64,52 +78,63 @@ header {
     cursor: pointer;
 }
 
-.search-bar button img {
+.search-bar button img 
+{
     height: 35px;
     width: 35px;
 }
 
-.nav-links {
+.nav-links 
+{
     list-style-type: none;
     display: flex;
     align-items: center;
 }
 
-.nav-links li {
+.nav-links li 
+{
     margin-left: 20px;
 }
 
-.nav-links a {
+.nav-links a 
+{
     color: #e0e0e0;
     text-decoration: none;
     font-size: 16px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover 
+{
     color: #06f422;
 }
 
-.nav-links a {
+.nav-links a 
+{
     text-decoration: none;
     font-size: 16px;
     display: flex;
     align-items: center;
 }
 
-.nav-links a i {
-    margin-right: 8px; /* Space between the icon and the text */
+.nav-links a i 
+{
+    margin-right: 8px; 
     font-size: 18px;
 }
 
-.container {
+/* <!-- ===================== TEXT JUMPING WITH ANIMATION AND KEYCHAIN-WATCH CSS  ====================== --> */
+
+.container 
+{
     display: flex;
     justify-content: center;
     align-items: flex-start;    height: calc(102vh - 80px); 
-    /* background: linear-gradient(to right,#0044ff, #00ffff); */
-    padding-top: 6vh;}
+    padding-top: 6vh;
+}
 
 
-#animated-text {
+#animated-text 
+{
     font-size: 4rem;
     color: rgb(11, 2, 2); 
     letter-spacing: 5px; 
@@ -128,14 +153,16 @@ header {
     0 20px 20px rgba(0,0,0,.15);
 }
 
-.char {
+.char 
+{
     display: inline-block;
     opacity: 0;
     transform: translateY(-50px);
     animation: jumpIn 0.5s ease forwards;
 }
 
-@keyframes jumpIn {
+@keyframes jumpIn 
+{
     0% {
         transform: translateY(-50px);
         opacity: 0;
@@ -150,25 +177,28 @@ header {
     }
 }
 
-.clock-container {
+.clock-container 
+{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.clock {
+.clock 
+{
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #fff;
-    border: 10px solid #333;
+    border: 10px solid #8d9b14;
     position: absolute;
     top: 145%;
     left: 25%;
 }
 
-.clock-img {
+.clock-img 
+{
     position: absolute;
     top: -4px;
     left: -4px;
@@ -177,43 +207,50 @@ header {
     z-index: 1;
 }
 
-.clock-image img {
+.clock-image img 
+{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hour-hand, .minute-hand, .second-hand, .center-dot, .numbers {
+.hour-hand, .minute-hand, .second-hand, .center-dot, .numbers 
+{
     position: absolute;
     z-index: 2;
 }
 
-.hour-hand, .minute-hand, .second-hand {
+.hour-hand, .minute-hand, .second-hand 
+{
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform-origin: bottom;
 }
 
-.hour-hand {
+.hour-hand 
+{
     width: 8px;
     height: 56px;
     background-color: #333;
 }
 
-.minute-hand {
+.minute-hand 
+{
     width: 4px;
     height: 56px;
     background-color: #666;
 }
 
-.second-hand {
+.second-hand 
+{
     width: 2px;
     height: 56px;
     background-color: #f00;
 }
 
-.center-dot {
+.center-dot
+{
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -224,7 +261,8 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.numbers {
+.numbers 
+{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -232,7 +270,8 @@ header {
     left: 0;
 }
 
-.number {
+.number 
+{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -242,12 +281,14 @@ header {
     font-weight: lighter;
 }
 
-.number span {
+.number span 
+{
     display: inline-block;
     transform: rotate(calc(-1 * var(--rotation)));
 }
 
-.flying-kitchen {
+.flying-kitchen 
+{
     position: absolute;
     left: 50px;
     top: 40%;
@@ -256,22 +297,29 @@ header {
     animation: fly 5s ease-in-out infinite;
 }
 
-.flying-kitchen img {
+.flying-kitchen img 
+{
     width: 100%;
     height: 495px;
     object-fit: contain;
 }
 
-@keyframes fly {
+@keyframes fly 
+{
     0%, 100% { transform: translateY(0) rotate(1deg); }
     50% { transform: translateY(-20px) rotate(-1deg); }
 }
-.World{
+
+/* <!-- ===================== CENTER TEXT BOX ABOUT WEBSITE DESCRIPTION BOX CSS ====================== --> */
+
+.World
+{
     position: absolute;
     top: -175px;
 }
 
-.box{
+.box
+{
     position: absolute;
     bottom: 205px;
     width: 900px;
@@ -281,18 +329,21 @@ header {
     border-radius: 20px;
 }
 
-@property --a {
+@property --a 
+{
     syntax: "<angle>";
     inherits: false;
     initial-value: 0deg;
 }
 
-@keyframes animate {
+@keyframes animate 
+{
     0% { --a: 0deg; }
     100% { --a: 360deg; }
 }
 
-.box::before{
+.box::before
+{
     content: "";
     position: absolute;
     width: 100%;
@@ -303,7 +354,8 @@ header {
     border-radius: 20px;
 }
 
-.box::after{
+.box::after
+{
     content: "";
     position: absolute;
     inset: 4px;
@@ -312,7 +364,8 @@ header {
     border: 8px solid #2d2d39;
 }
 
-.description-box {
+.description-box 
+{
     position: absolute;
     top: 63%;
     left: 50%;
@@ -326,24 +379,30 @@ header {
     z-index: 10;
 }
 
-.description-box p {
+.description-box p 
+{
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
     color: #06f422;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn
+{
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-@keyframes float {
+@keyframes float 
+{
     0%, 100% { transform: translate(-50%, -50%); }
     50% { transform: translate(-50%, -52%); }
 }
 
-.images{
+/* <!-- ===================== SCROLLING IMAGES CSS ====================== --> */
+
+.images
+{
     overflow: hidden;
     padding: 60px 0;
     position: fixed;
@@ -351,21 +410,25 @@ header {
     bottom: 500px;
 }
 
-.images:hover .images-slide{    
+.images:hover .images-slide
+{    
     animation-play-state: paused;
 }
 
-.images-slide{
+.images-slide
+{
     display: inline-block;
     animation: 70s slide infinite linear;
 }
 
-.images-slide img{
-    height: 75px;
+.images-slide img
+{
+    height: 111px;
     margin: 0 40px;
 }
 
-@keyframes slide {
+@keyframes slide 
+{
     from {
         transform: translateX(0);
     }
@@ -374,7 +437,10 @@ header {
     }
 }
 
-.login-button{
+/* <!-- ===================== LOGIN BUTTON CSS ====================== --> */
+
+.login-button
+{
     position: absolute;
     bottom: 10%;
     left: 45%;
@@ -389,7 +455,8 @@ header {
     border-radius: 10%;
 }
 
-.login-button:hover{
+.login-button:hover
+{
     background-color: #000;
     box-shadow: 0 0 5px #64f074,
                 0 0 25px #64f074,
