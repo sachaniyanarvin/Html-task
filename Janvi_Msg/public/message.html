@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message for You</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .message-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .message {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #444;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .message.visible {
+      opacity: 1;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      display: none;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .next-button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <div class="message" id="msg1">Hey Bestie! 💖</div>
+    <div class="message" id="msg2">I know you’re busy with studies, 📚</div>
+    <div class="message" id="msg3">But I just wanted to remind you, 🌟</div>
+    <div class="message" id="msg4">You’re special to me — always. 🤗</div>
+    <div class="message" id="msg5">Come back when you're free… I'll be waiting. 🌈</div>
+    <button class="next-button" onclick="goToReply()">Write Me Back</button>
+  </div>
+
+  <script>
+    const messages = [
+      document.getElementById('msg1'),
+      document.getElementById('msg2'),
+      document.getElementById('msg3'),
+      document.getElementById('msg4'),
+      document.getElementById('msg5'),
+    ];
+
+    let index = 0;
+
+    function showNextMessage() {
+      if (index < messages.length) {
+        messages[index].classList.add('visible');
+        index++;
+        setTimeout(showNextMessage, 1500);
+      } else {
+        document.querySelector('.next-button').style.display = 'inline-block';
+      }
+    }
+
+    // Start animation
+    window.onload = () => {
+      setTimeout(showNextMessage, 1000);
+    };
+
+    function goToReply() {
+      window.location.href = "reply.html";
+    }
+  </script>
+</body>
+</html>
