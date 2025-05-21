@@ -19,25 +19,22 @@ if (!fs.existsSync(messagesDir)) {
 }
 
 // Save message route
-app.post('/save-message', (req, res) => {
+app.post('/send-message', (req, res) => {
     const message = req.body.message;
-
-    if (!message || message.trim() === "") {
-        return res.status(400).send("Message is empty.");
-    }
-
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const filename = `message_${timestamp}.txt`;
-    const filePath = path.join(messagesDir, filename);
-
+    const timestamp = Date.now();
+    const filename = `message-${timestamp}.txt`;
+  
+    const filePath = path.join(__dirname, 'message', filename);
+  
     fs.writeFile(filePath, message, (err) => {
-        if (err) {
-            console.error("Error writing message:", err);
-            return res.status(500).send("Failed to save message.");
-        }
-        res.send("Message saved successfully 💌");
+      if (err) {
+        console.error('Failed to write file:', err);
+        return res.status(500).send('Failed to save message');
+      }
+      res.send('Message saved');
     });
-});
+  });
+  
 
 // Start server
 app.listen(PORT, () => {
